@@ -14,10 +14,10 @@ The "game" is a zero-player game, meaning that its evolution is determined by it
 
 Every cell interacts with its eight *neighbours*, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
 
-1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation (模拟生命数量稀少).
 2. Any live cell with two or three live neighbours lives on to the next generation.
-3. Any live cell with more than three live neighbours dies, as if by overpopulation.
-4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+3. Any live cell with more than three live neighbours dies, as if by overpopulation (模拟生命数量过多).
+4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction (模拟繁殖).
 
 ## Complete the Code
 
@@ -30,6 +30,7 @@ In this lab, you have three options:
 ### How to implement a timer?
 
 1. `java.util.Timer`. Here is a sample:
+
 
    ```java
    import java.awt.Toolkit;
@@ -69,7 +70,9 @@ In this lab, you have three options:
    }
    ```
 
-   2. `Timeline`. Refer to your textbook for help. TAs haven't used this before.
+
+2. `Timeline`. Refer to your textbook for help. TAs haven't used this before.
+
 
    ## Submission
 
