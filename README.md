@@ -32,7 +32,7 @@ In this lab, you have three options:
 1. `java.util.Timer`. Here is a sample:
 
 
-   ```java
+```java
    import java.awt.Toolkit;
    import java.util.Timer;
    import java.util.TimerTask;
@@ -42,6 +42,8 @@ In this lab, you have three options:
     * seconds have passed, and every 10 seconds.
     */
 
+	// Toolkit is only used to "beep" in this example.
+	// You don't need to use Toolkit in your code.
     Toolkit toolkit;
     
     public static void main(String args[]) {
@@ -58,11 +60,40 @@ In this lab, you have three options:
        System.out.println("Task scheduled.");
      }
    }
-   ```
+```
 
 
-2. `Timeline`. Refer to your textbook for help. TAs haven't used this before.
+2. `Timeline`. Here is an example:
 
+
+```java
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+public class Test extends Application {
+
+    private int count = 1;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        KeyFrame keyFrame = new KeyFrame(Duration.millis(1000), e -> {
+            System.out.println(count++);
+            // Do more things here...
+        });
+        Timeline timeline = new Timeline(keyFrame); 
+        timeline.setCycleCount(Animation.INDEFINITE); // loop infinitly
+        timeline.play(); // start timeline
+    }
+    
+}
+
+```
+
+The example code uses lambda expression. If you have further questions, refer to your textbook for help!
 
    ## Submission
 
