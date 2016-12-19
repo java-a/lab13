@@ -63,12 +63,7 @@ public class GameView extends Application {
 
         primaryStage.show();
 
-        Timer timer = new java.util.Timer();
-        timer.schedule(new TimerTask() {
-            public void run() {
-                Platform.runLater(() -> updateCell());
-            }
-        }, TIMER_DELAY, TIMER_PERIOD);
+        // Your Code Here Here Here ~~~
     }
 
     /**
@@ -76,34 +71,7 @@ public class GameView extends Application {
      * Every time this method is called, the canvas shoule be updated to the latest generation.
      */
     private void updateCell() {
-        boolean[][] newCellsStatus = new boolean[HEIGHT][WIDTH];
-        for (int i = 0; i < HEIGHT; i++) {
-            for (int j = 0; j < WIDTH; j++) {
-                int neighbors = this.getNumberOfLivingNeighbors(i, j);
-                if (getCellStatus(i, j)) {
-                    if (neighbors == 2 || neighbors == 3) {
-                        newCellsStatus[i][j] = true;
-                        cellsView[i][j].setBackground(livingCellBackground);
-                    } else {
-                        newCellsStatus[i][j] = false;
-                        cellsView[i][j].setBackground(deadCellBackground);
-                    }
-                } else {
-                    if (neighbors == 3) {
-                        newCellsStatus[i][j] = true;
-                        cellsView[i][j].setBackground(livingCellBackground);
-                    } else {
-                        newCellsStatus[i][j] = false;
-                        cellsView[i][j].setBackground(deadCellBackground);
-                    }
-                }
-            }
-        }
-        for (int i = 0; i < HEIGHT; i++) {
-            for (int j = 0; j < WIDTH; j++) {
-                cellsStatus[i][j] = newCellsStatus[i][j];
-            }
-        }
+        // Your Code Here Here Here ~~~
     }
 
     /**
