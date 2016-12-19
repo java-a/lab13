@@ -25,7 +25,7 @@ In this lab, you have three options:
 
 1. Start from zero. Complete all of the code by yourself. This is the recommended option, because students in previous years were all required to do so. You only need to display the UI and handle the basic logic correctly.
 2. Start from the code TA provides. The application has only one frame. You need to implement the `updateCell` method and a timer to run the game automatically.
-3. Based on the second option, you can select some advanced features to implement. Look at the animation gif on top of this document. This is a textview showing current generation, a button to pause and play, a next button, and a clear button. These all add to the complexity of the code and you are free to challege yourself.
+3. Based on the second option, you can select some advanced features to implement. Look at the animation gif on top of this document. There is a textview showing current generation, a button to pause and play, a next button, and a clear button. These all add to the complexity of the code and you are free to challege yourself.
 
 ### How to implement a timer?
 
