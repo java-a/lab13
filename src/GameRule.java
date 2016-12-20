@@ -53,6 +53,8 @@ class GameRule {
                         step += 1;
                     }
                     currentCol += oMatcher.group(0).length();
+                } else if (currentCol == row.length() - 1) {
+                    break;
                 }
             }
             currentRow += 1;
