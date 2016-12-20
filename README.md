@@ -29,41 +29,42 @@ In this lab, you have three options:
 
 ### How to implement a timer?
 
-1. `java.util.Timer`. Here is a sample:
+1 . `java.util.Timer`. Here is a sample:
 
 
 ```java
-   import java.awt.Toolkit;
-   import java.util.Timer;
-   import java.util.TimerTask;
+import java.awt.Toolkit;
+import java.util.Timer;
+import java.util.TimerTask;
 
-   /**
-    * Simple demo that uses java.util.Timer to schedule a task to execute once 5
-    * seconds have passed, and every 10 seconds.
-    */
+/**
+ * Simple demo that uses java.util.Timer to schedule a task to execute once 5
+ * seconds have passed, and every 10 seconds.
+ */
 
-	// Toolkit is only used to "beep" in this example.
-	// You don't need to use Toolkit in your code.
-    Toolkit toolkit;
-    
+class GameOfLine {
+    // Toolkit is only used to "beep" in this example.
+    // You don't need to use Toolkit in your code.private static Toolkit toolkit;
+    private static Timer timer;
+
     public static void main(String args[]) {
-       System.out.println("About to schedule task.");
-       int delaySeconds = 5, periodSeconds = 10;
-       timer = new Timer();
-       timer.schedule(timer.schedule(new TimerTask() {
+        System.out.println("About to schedule task.");
+        int delaySeconds = 5, periodSeconds = 10;
+        GameOfLine.toolkit = Toolkit.getDefaultToolkit();
+        GameOfLine.timer = new Timer();
+        GameOfLine.timer.schedule(new TimerTask() {
             public void run() {
                 System.out.println("Time's up!");
-                toolkit.beep();
+                GameOfLine.toolkit.beep();
             }
         }, delaySeconds * 1000, periodSeconds * 1000);
 
-       System.out.println("Task scheduled.");
-     }
-   }
+        System.out.println("Task scheduled.");
+    }
+}
 ```
 
-
-2. `Timeline`. Here is an example:
+2 . `Timeline`. Here is an example:
 
 
 ```java
