@@ -42,20 +42,21 @@ import java.util.TimerTask;
  * seconds have passed, and every 10 seconds.
  */
 
-class GameOfLine {
+class GameOfLife {
     // Toolkit is only used to "beep" in this example.
     // You don't need to use Toolkit in your code.private static Toolkit toolkit;
     private static Timer timer;
+    private static Toolkit toolkit;
 
     public static void main(String args[]) {
         System.out.println("About to schedule task.");
         int delaySeconds = 5, periodSeconds = 10;
-        GameOfLine.toolkit = Toolkit.getDefaultToolkit();
-        GameOfLine.timer = new Timer();
-        GameOfLine.timer.schedule(new TimerTask() {
+        toolkit = Toolkit.getDefaultToolkit();
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
             public void run() {
                 System.out.println("Time's up!");
-                GameOfLine.toolkit.beep();
+                toolkit.beep();
             }
         }, delaySeconds * 1000, periodSeconds * 1000);
 
